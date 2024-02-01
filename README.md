@@ -2,6 +2,6 @@
 
 Repositório destinado para estudos de Prolog.
 
-### Ferramenta
+### Ferramentas
 
-A ferramente utilizada para o desenvolvimento deste repositório foi o [SWISH](https://swish.swi-prolog.org/).
+A ferramenta utilizada para o desenvolvimento e execução do código contido neste repositório foi o [SWISH](https://swish.swi-prolog.org/).
