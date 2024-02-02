@@ -1,4 +1,4 @@
-# Prolong
+# Prolog
 
 Repositório destinado para estudos de Prolog.
 
