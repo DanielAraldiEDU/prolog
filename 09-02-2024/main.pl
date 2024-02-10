@@ -55,3 +55,11 @@ progenitress(iris, jorge).
 % parents of the "iris"
 % progenitress(Parents, jose) -> Show
 % parents of the "jose"
+% progenitress(Parents, Children) ->
+% Show all parents and your children
+% progenitress(Grandfather, Father), progenitress(Father, jorge) ->
+% Show grandfather and father of "jorge"
+% progenitress(joao, Child), progenitress(Child, Grandchild) ->
+% Show all grandchild of "joao"
+% progenitress(Parents, jose), progenitress(Parents, ana) ->
+% Show parents in common between "jose" and "ana"
