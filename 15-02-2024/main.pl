@@ -15,7 +15,7 @@ grandfather(X, Y) :- father(X, Z), father(Z, Y).
 % Check if it's ancestral (recursive call)
 ancestral(X, Y) :- father(X, Y).
 ancestral(X, Y) :- father(X, Z), ancestral(Z, Y).
-% ----------------------------------------------
+% ---------------------------------------------
 
 successor(2, 1).
 successor(3, 2).
@@ -27,4 +27,13 @@ successor(7, 6).
 % Check if it's successor
 bigger(X, Y) :- successor(X, Y).
 bigger(X, Y) :- successor(X, Z), bigger(Z, Y).
-% ----------------------------------------------
+
+lesser(X, Y) :- successor(Y, X).
+lesser(X, Y) :- successor(Z, X), lesser(Z, Y).
+% ---------------------------------------------
+
+% Check if a value is on array
+member(X, [H|_]) :- X = H.
+member(X, [_|T]) :- member(X, T).
+% The "_" (underline) says value doesn't be used
+% ---------------------------------------------
