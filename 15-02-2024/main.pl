@@ -24,7 +24,7 @@ successor(5, 4).
 successor(6, 5).
 successor(7, 6).
 
-% Check if it's successor
+% Check if it's successor (recursive call)
 bigger(X, Y) :- successor(X, Y).
 bigger(X, Y) :- successor(X, Z), bigger(Z, Y).
 
@@ -32,8 +32,13 @@ lesser(X, Y) :- successor(Y, X).
 lesser(X, Y) :- successor(Z, X), lesser(Z, Y).
 % ---------------------------------------------
 
-% Check if a value is on array
+% Check if a value is on array (recursive call)
 member(X, [H|_]) :- X = H.
 member(X, [_|T]) :- member(X, T).
 % The "_" (underline) says value doesn't be used
 % ---------------------------------------------
+
+% Check if these two arrays are equals 
+% (recursive call)
+x2y([x], [y]).
+x2y([_|X], [_|Y]) :- x2y(X, Y).
